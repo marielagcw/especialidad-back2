@@ -12,12 +12,17 @@ spring:
   security:
     oauth2:
       client:
+        provider:
+          keycloak-provider:
+            issuer-uri:
+              http://localhost:8085/realms/DigitalMedia
         registration:
-          keycloak:
+          api-gateway:
+            provider: keycloak-provider
             client-id: api-gateway
-            client-secret: fDvAL9JjkKVzYoX3CHBj8CSNWbYS0Sgb
-            scope: openid
-            redirect-uri: http://localhost:8081/
+            client-secret: drlrV2c6uBJAJWcaNtkeNkSzU7xrlCd3
+            authorization-grant-type: authorization_code
+            redirect-uri: 'http://localhost:8081/login/oauth2/code/keycloak'
 
   cloud:
     gateway:
