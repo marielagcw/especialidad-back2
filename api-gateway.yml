@@ -12,10 +12,16 @@ spring:
   security:
     oauth2:
       client:
+        provider:
+          keycloak:
+            issuer-uri:
+              http://localhost:8080/realms/DigitalMedia
         registration:
-          github:
-            clientId: 295ef9e4c744623cbcb1
-            clientSecret: 374e226a690b16d03f8eb5448356dfe7aaf02cc9
+          keycloak:
+            client-id: api-gateway
+            client-secret: drlrV2c6uBJAJWcaNtkeNkSzU7xrlCd3
+            scope: openid
+            redirect-uri: http://localhost:8081/
 
   cloud:
     gateway:
