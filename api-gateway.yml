@@ -15,11 +15,11 @@ spring:
         provider:
           keycloak:
             issuer-uri:
-              http://localhost:8080/realms/DigitalMedia
+              http://localhost:8080/realms/DigitalMedia/
         registration:
           keycloak:
             client-id: api-gateway
-            client-secret: drlrV2c6uBJAJWcaNtkeNkSzU7xrlCd3
+            client-secret: fDvAL9JjkKVzYoX3CHBj8CSNWbYS0Sgb
             scope: openid
             redirect-uri: http://localhost:8081/
 
